@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/font.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/lazStyle.css">
+
+		<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+		<script src="https://unpkg.com/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.js"></script>
+		
+		<title>Kwitansi Masuk Versi 5 (Under Development)</title>
+
+	</head>
+	<body>
+		<div id="allBody">
+			<h1 id="title" class="kwHeader">
+				<a href="#">KUITANSI DIGITAL LAZISMU KOTA SINGKAWANG</a>
+			</h1>
+
+			<div>
+				<form id="formKwitansi">
+					<h2 class="kwHeader2">Form Kuitansi</h2>
+					<table id="tabel-data-induk-kuitansi" class="kwTableForm even-style"></table>
+					<table id="tabel-data-personal-kuitansi" class="kwTableForm even-style"></table>
+					<table id="tabel-data-jenis-nilai-transaksi" class="kwTableForm even-style"></table>
+					<table id="tabel-data-upload" class="kwTableForm"></table>
+					<table id="tabel-tombol-aksi" class="kwTableForm"></table>
+				</form>
+			</div>
+
+			<div class="output-area">
+				<embed id="embedpdf"></embed>
+				<iframe id="iframepdf"></iframe>
+				<object id="objectpdf"></object>
+			</div>
+			<div id="footer">Copyright © 2024 <a href="https://lazismu-singkawang.business.site">Lazismu Kota Singkawang</a></div>
+		</div>
+
+		<script src="js/blobData.js"></script>
+		<script src="js/jsFormProperty.js"></script>
+		<script src="js/jsListDalil.js"></script>
+		<script src="js/jsGLobalData.js"></script>
+
+		<script src="js/jsFormBuilder.js"></script>
+		<script src="js/makepdf.js"></script>
+		<script src="js/siteFunctions.js"></script>
+
+		<script src="js/jsGenerateForm.js"></script>
+		<script src="js/eventListener.js"></script>
+
+		<script src="js/jsReadParam.js"></script>
+	</body>
+</html>

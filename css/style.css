@@ -1,0 +1,256 @@
+body {
+	margin: auto;
+	font-family: sans-serif;
+}
+
+.kwHeader {
+	text-align: center;
+	background-color: black;
+	font-family: 'Roboto';
+	font-size: 16pt;
+	font-weight: bold;
+	margin-bottom: 16px;
+	padding: 10px 0px;
+}
+
+.kwHeader a {
+	text-decoration: none;
+	color : #ffc252;
+}
+
+.kwHeader2 {
+	text-align: center;
+	font-family: 'Roboto';
+	font-size: 16pt;
+	font-weight: bold;
+	margin-bottom: 16px;
+	padding: 10px 0px;
+}
+
+.kwContentArea{
+	margin: auto;
+}
+
+.laz-valign-middle {
+	vertical-align: middle;
+}
+
+.ttd {
+	margin-top: 28px;
+}
+
+.kwTableForm {	
+	margin: auto;
+}
+
+.laz-formsubheader {
+	font-family: "arial";
+	font-weight: bold;
+}
+
+.kwTableForm {
+	width: 80%;
+	margin-top: 10px;
+	padding: 5px 2px 10px 2px;
+	border: 1px solid black;
+}
+
+.kwTableForm textarea{
+	width: 80%;
+	font-family: sans-serif;
+	resize: none;
+	height: 100px;
+	max-height: 100px;
+	overflow-y: auto;
+}
+
+.kwTableForm input[type=text] {
+	background-color: #ffffff00;
+	width: 80%;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.kwTableForm input[type=text]:focus {
+	outline: none;
+	border-bottom: 2px solid black;
+}
+
+.kwTableForm input:focus {
+	font-size: large;
+}
+
+.kwTableForm input[type=date]{
+	border: none;
+	width: 80%;
+	border-bottom: 1px solid black;
+}
+
+.kwTableForm button:focus {
+	margin:2px;
+	outline: gray solid 4px;
+}
+
+/* https://www.figma.com/resource-library/color-combinations/ */
+
+
+/* blue : https://colorhunt.co/palette/7695ff9dbdffffd7c4ff9874 */
+.btn-default {
+	background-color: #ff984f;
+	color: black;
+	padding: 5px 2px;
+	border-radius: 5px;
+	border: 3px solid #ffffff00;
+	transition: 0.3s;
+}
+
+.btn-default:hover {
+	background-color: #fbb584
+}
+
+.btn-default:active {
+	background-color: #ce804a;
+	border: 3px solid #00000088;
+}
+
+.btn-blue {
+	background-color: #7695FF;
+	color: white;
+	padding: 5px 2px;
+	border-radius: 5px;
+	border: 3px solid #ffffff00;
+	transition: 0.3s;
+}
+
+.btn-blue:hover {
+	background-color: #547afe;
+}
+
+.btn-blue:active {
+	background-color: #b9c9ff;
+	border: 3px solid #00000088;
+}
+
+.btn-red {
+	background-color: #e24646;
+	color: white;
+	padding: 5px 2px;
+	border-radius: 5px;
+	border: none;
+}
+
+.btn-red:hover {
+	background-color: #f66d6d;
+}
+
+.btn-red:active {
+	background-color: #ff2525;
+}
+
+.btn-gray {
+	background-color: #828282;
+	color: white;
+	padding: 5px 2px;
+	border-radius: 5px;
+	border: none;
+}
+.btn-gray:hover {
+	background-color: #a5a4a4;
+}
+.btn-gray:active {
+	background-color: #bebdbd;
+}
+
+.btn-green {
+	background-color: #008000;
+	color: white;
+	padding: 5px 2px;
+	border-radius: 5px;
+	border: none;
+}
+.btn-green:hover {
+	background-color: #006700;
+}
+.btn-green:active {
+	background-color: #015701;
+}
+
+.btn-aqua {
+	background-color: #00FFFF;
+	color: white;
+	padding: 5px 2px;
+	border-radius: 5px;
+	border: none;
+}
+.btn-aqua:hover {
+	background-color: #00d1d1;
+}
+.btn-aqua:active {
+	background-color: #02a7a7;
+}
+
+.black {
+	background-color: #5757ff;
+	color: white;
+	padding: 5px 2px;
+	border-radius: 5px;
+	border: none;
+}
+
+.laz-w100 {
+	width: 100%;
+}
+
+.laz-w75 {
+	width: 75%;
+}
+
+.laz-w50 {
+	width: 50%;
+}
+
+#modalTandaTangan {
+	text-align: center;
+	font-family: sans-serif;
+	padding: 25px;
+}
+
+#modalTandaTangan div select {
+	width: 65%;
+	margin-top: 8px;
+}
+
+#modalMelalui {
+	text-align: center;
+	font-family: sans-serif;
+	line-height: 1.5em;
+}
+
+#buttonArea{
+	margin-top: 12px;
+	text-align: center;
+}
+
+#buttonArea button{
+	padding: 6px 20px;
+	border-radius: 4px;
+	background-color: #007bff;
+	border: none;
+	cursor: pointer;
+	color: white;
+	font-family: 'Roboto';
+}
+
+#footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 10px 0px;
+	margin-top: 16px;
+	font-size: 8pt;
+	font-family: 'Roboto';
+}
+
+.0 {
+	border: 2px solid black;
+}
