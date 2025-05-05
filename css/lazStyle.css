@@ -28,5 +28,5 @@
 #iframepdf {
 	width: 100%;
 	margin: auto;
-	background-color: yellow;
+	display: none;
 }
