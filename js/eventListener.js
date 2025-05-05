@@ -32,6 +32,8 @@ document.getElementById(formButton.btnAutoHitung.id).addEventListener("click", f
 // untuk mereset form
 document.getElementById(formButton.btnResetForm.id).addEventListener("click", function(){
 	resetForm();
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 	this.blur();
 });
 
