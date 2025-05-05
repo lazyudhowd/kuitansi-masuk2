@@ -1,4 +1,5 @@
 function downloadPdf(){
+	setLocaleZakatSedekahLainnya()
 	let ourpdf = makepdf();
 
 	let currentDate = new Date();
@@ -18,6 +19,7 @@ function downloadPdf(){
 }
 
 function previewPdf(){
+	setLocaleZakatSedekahLainnya()
 	let ourpdf = makepdf()
 
 	let embedTarget = document.getElementById("iframepdf");
@@ -25,6 +27,7 @@ function previewPdf(){
 	embedTarget.style.width="100%";
 	embedTarget.style.height="500px";
 	embedTarget.src = ourpdf.output("datauristring");
+	embedTarget.style.display = "block"
 }
 
 function lazDateTimeFormater4(eValue){
@@ -266,6 +269,35 @@ function formToNumber(fObject){
 	// console.log("parseInt : "+parseInt(formValue));
 }
 
+function setLocaleZakatSedekahLainnya(){
+	let nominalZakat = formToNumber(formKwitansi.nominalZakat);
+	let nominalSedekah = formToNumber(formKwitansi.nominalSedekah);
+	let nominalLainnya = formToNumber(formKwitansi.nominalLainnya);
+
+	let localeZakat = nominalZakat.toLocaleString("id-ID");
+	let localeSedekah = nominalSedekah.toLocaleString("id-ID");
+	let localeLainnya = nominalLainnya.toLocaleString("id-ID");
+
+	if (nominalZakat !== 0){
+		document.getElementById(formKwitansi.nominalZakat.id).value = localeZakat;
+	} else{
+		document.getElementById(formKwitansi.nominalZakat.id).value = "";
+	}
+
+	if (nominalSedekah !== 0){
+		document.getElementById(formKwitansi.nominalSedekah.id).value = localeSedekah;
+	} else {
+		document.getElementById(formKwitansi.nominalSedekah.id).value = "";
+	}
+
+	if (nominalLainnya !== 0){
+		document.getElementById(formKwitansi.nominalLainnya.id).value = localeLainnya;
+	} else {
+		document.getElementById(formKwitansi.nominalLainnya.id).value = "";
+	}
+	
+}
+
 function hitungOtomatisTotalTerbilang(){
 	let nominalZakat = formToNumber(formKwitansi.nominalZakat);
 	let nominalSedekah = formToNumber(formKwitansi.nominalSedekah);
@@ -291,7 +323,9 @@ function hitungOtomatisTotalTerbilang(){
 	kolomTotal.value = nominalToString;
 
 	let areaTerbilang = document.getElementById(formKwitansi.jumlahTerbilang.id);
-	areaTerbilang.value = terbilang;	
+	areaTerbilang.value = terbilang;
+
+	setLocaleZakatSedekahLainnya();
 }
 
 function setValueToForm(fFormTarget, fValue){
@@ -368,7 +402,8 @@ function resetForm(){
 function setFormDefaultValue(){
 	// setValueToForm(formKwitansi.wilayah.id, "KOTA SINGKAWANG");
 	setValueToForm(formKwitansi.nomor.id, "00000001");
-	setValueToForm(formKwitansi.tanggal.id, "2025-12-18");
+	let currentDate = new Date();
+	setValueToForm(formKwitansi.tanggal.id, currentDate.getFullYear()+"-"+(currentDate.getMonth()+1).toString().padStart(2,"0")+"-"+currentDate.getDate().toString().padStart(2,"0"));
 	setValueToForm(formKwitansi.alamat.id, "Jl Pembangunan, Kelurahan Tengah, Kota Singkawang");
 	setValueToForm(formKwitansi.nama.id, "Muzaki");
 	setValueToForm(formKwitansi.telponFax.id, "0812-5800-0399");
